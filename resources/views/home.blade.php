@@ -1,0 +1,11 @@
+@extends('layouts.layout')
+<x-seo.meta
+    title=""
+    description=""
+    keywords=""
+/>
+@section('content')
+    <main>
+        Aquaexcursion
+    </main>
+@endsection
