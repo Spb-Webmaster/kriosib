@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Layouts;
 
+use App\MoonShine\Pages\CatalogPage;
+use App\MoonShine\Pages\GalleryPage;
 use App\MoonShine\Pages\IndexPage;
+use App\MoonShine\Pages\PartnerPage;
+use App\MoonShine\Pages\PricePage;
 use App\MoonShine\Pages\SettingPage;
+use App\MoonShine\Resources\GalleryResource;
 use App\MoonShine\Resources\MoonShineUserResource;
 use App\MoonShine\Resources\MoonShineUserRoleResource;
 use App\MoonShine\Resources\UserSliderResource;
@@ -34,7 +39,8 @@ use MoonShine\UI\Components\{Breadcrumbs,
     Layout\ThemeSwitcher,
     Layout\TopBar,
     Layout\Wrapper,
-    When};
+    When
+};
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 
@@ -58,11 +64,28 @@ final class AxeldLayout extends AppLayout
                 MenuItem::make('Настройки сайта', SettingPage::class, 'adjustments-vertical'),
             ]),
             MenuGroup::make('Страницы', [
-                MenuItem::make('Главная страница', IndexPage::class, 'document-chart-bar'),
+                MenuItem::make('Главная', IndexPage::class, 'document-chart-bar'),
+                MenuItem::make('Каталог', CatalogPage::class, 'shopping-cart'),
+                MenuItem::make('Прайс', PricePage::class, 'banknotes'),
+                MenuItem::make('Фотогалерея', GalleryPage::class, 'photo'),
+                MenuItem::make('Партнеры', PartnerPage::class, 'user-plus'),
+            ]),
+            MenuGroup::make('Каталог', [
+
+                MenuGroup::make('Фотогалерея', [
+                    MenuItem::make('Фото', GalleryResource::class, 'photo'),
+                ]),
+                MenuGroup::make('Продукция', [
+                    MenuItem::make('Товары', GalleryResource::class, 'shopping-cart'),
+                ]),
+                MenuGroup::make('Прайс', [
+                    MenuItem::make('Цены', GalleryResource::class, 'banknotes'),
+                ]),
             ]),
             MenuGroup::make('Модули', [
                 MenuItem::make('Слайдеры', UserSliderResource::class, 'swatch'),
-            ])
+            ]),
+
         ];
     }
 

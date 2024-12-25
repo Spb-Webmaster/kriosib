@@ -4,13 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserSlider extends Model
+class Gallery extends Model
 {
-    protected $table = 'user_sliders';
-    protected $fillable = ['slider'];
-    protected $casts = [
-        'slider' => 'collection',
-    ];
+   protected $table = 'galleries';
+
+   protected $fillable = [
+       'title',
+       'img',
+       'published',
+       'sorting',
+   ];
     protected static function boot()
     {
         parent::boot();

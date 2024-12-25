@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use MoonShine\Laravel\Pages\Page;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\TinyMce\Fields\TinyMce;
+use MoonShine\UI\Components\Alert;
 use MoonShine\UI\Components\Collapse;
 use MoonShine\UI\Components\FormBuilder;
 use MoonShine\UI\Components\Heading;
@@ -21,7 +22,7 @@ use MoonShine\UI\Fields\Json;
 use MoonShine\UI\Fields\Text;
 use PhpParser\Node\Stmt\Block;
 
-class PartnerPage extends Page
+class GalleryPage extends Page
 {
     /**
      * @return array<string, string>
@@ -35,14 +36,14 @@ class PartnerPage extends Page
 
     public function getTitle(): string
     {
-        return $this->title ?: 'Настройка сайта';
+        return $this->title ?: 'Фотогалерея сайта';
     }
 
     public function setting()
     {
 
-        if (Storage::disk('config')->exists('moonshine/partner.php')) {
-            $result = include(storage_path('app/public/config/moonshine/partner.php'));
+        if (Storage::disk('config')->exists('moonshine/gallery.php')) {
+            $result = include(storage_path('app/public/config/moonshine/gallery.php'));
         } else {
             $result = null;
         }
@@ -65,14 +66,14 @@ class PartnerPage extends Page
         return [
 
 
-            FormBuilder::make('/moonshine/partner')
+            FormBuilder::make('/moonshine/gallery')
                 ->fields([
 
                     Tabs::make([
-                        Tab::make(__('Партнеры'), [
+                        Tab::make(__('Галерея'), [
 
 
-                            Divider::make('Наши партнеры'),
+                            Divider::make('Фотогалерея'),
                             Grid::make([
                                 Column::make([
                                     Collapse::make('', [
@@ -93,47 +94,20 @@ class PartnerPage extends Page
                                 ])->columnSpan(6),
                             ]),
 
-                            Grid::make([
-                                Column::make([
-
-                                    Collapse::make('', [
-
-                                        Json::make('Города', 'json_cities')->fields([
-
-                                            Text::make('Введите город', 'json_city'),
-                                            Text::make('Введите координаты, для яндекс карт', 'json_point'),
-
-                                        ])->vertical()->creatable(limit: 300)
-                                            ->removable()->default((isset($json_cities)) ? $json_cities : ''),
-
-                                    ]),
-
-                                ])->columnSpan(6),
-                                Column::make([
-
-                                    Collapse::make('', [
-
-                                        Json::make('Партнеры', 'json_partners')->fields([
-
-                                            Text::make('Введите Название организации', 'json_title'),
-
-                                        ])->vertical()->creatable(limit: 300)
-                                            ->removable()->default((isset($json_partners)) ? $json_partners : ''),
-
-                                    ]),
+                            Alert::make(type: 'primary')->content('Фотогалерея создается в разделе «Каталог» - «Фотогалерея»'),
 
 
-                                ])->columnSpan(6),
 
-
-                            ])
                         ]),
 
 
                     ]),
 
 
-                ])
+                ]),
+
+
+
 
 
         ];

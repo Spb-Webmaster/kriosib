@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Pages\CatalogPage;
+use App\MoonShine\Pages\GalleryPage;
 use App\MoonShine\Pages\IndexPage;
 use App\MoonShine\Pages\PartnerPage;
+use App\MoonShine\Pages\PricePage;
 use Illuminate\Support\ServiceProvider;
 use MoonShine\Contracts\Core\DependencyInjection\ConfiguratorContract;
 use MoonShine\Contracts\Core\DependencyInjection\CoreContract;
@@ -15,6 +18,9 @@ use App\MoonShine\Resources\MoonShineUserResource;
 use App\MoonShine\Resources\MoonShineUserRoleResource;
 use App\MoonShine\Pages\SettingPage;
 use App\MoonShine\Resources\UserSliderResource;
+use App\MoonShine\Resources\GalleryResource;
+use App\MoonShine\Resources\PriceResource;
+use App\MoonShine\Resources\ProductResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -32,12 +38,19 @@ class MoonShineServiceProvider extends ServiceProvider
                 MoonShineUserResource::class,
                 MoonShineUserRoleResource::class,
                 UserSliderResource::class,
+                GalleryResource::class,
+                PriceResource::class,
+                ProductResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
                 SettingPage::class,
                 IndexPage::class,
+                CatalogPage::class,
+                PricePage::class,
+                GalleryPage::class,
                 PartnerPage::class,
+
             ])
         ;
     }

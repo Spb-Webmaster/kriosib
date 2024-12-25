@@ -28,7 +28,7 @@
                                 class="jbimage full_5950_e02610cd-597e-49f5-a974-126777193d88"
                                 alt="{{ $slide['json_text'] }}"
                                 title="{{ $slide['json_text'] }}"
-                                src="{{ Storage::url($slide['json_img']) }}" width="160"
+                                src="{{ asset(intervention('160x232', $slide['json_img'], 'gallery', 'cover')) }}" width="160"
                                 height="232" data-template="popup"/></a>
                     </div>
 

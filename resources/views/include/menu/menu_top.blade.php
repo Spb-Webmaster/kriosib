@@ -16,14 +16,14 @@
                         class="temp_html_mod_menu">Прайс</span></a>
             </li>
 
-            <li class="">
-                <a href="/gallery"><span class="temp_html_mod_menu">Фотогалерея</span></a>
-            </li>
 
-            <li class="">
-                <a href="/partners"><span
-                        class="temp_html_mod_menu">Партнеры </span>
-                </a>
+            <li class="{{ active_linkMenu(route('gallery')) }}">
+                <a class="add__mobile_menu" href="{{ route('gallery')  }}">{{ __('Фотогалерея') }}</a>
+
+            </li>
+    <li class="{{ active_linkMenu(route('partners')) }}">
+                <a class="add__mobile_menu" href="{{ route('partners')  }}">{{ __('Парнеры') }}</a>
+
             </li>
 
             <li class="{{ active_linkMenu(route('contacts')) }}">

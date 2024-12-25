@@ -106,6 +106,30 @@ class IndexPage extends Page
 
 
                                     ]),
+
+                                ])->columnSpan(6),
+                                Column::make([
+                                    Divider::make('Метотеги'),
+                                    Collapse::make('', [
+
+                                        Text::make('Мета тэг (title) ', 'metatitle')->unescape()->default((isset($metatitle)) ? $metatitle : ''),
+                                        Text::make('Мета тэг (description) ', 'description')->unescape()->default((isset($description)) ? $description : ''),
+                                        Text::make('Мета тэг (keywords) ', 'keywords')->unescape()->default((isset($keywords)) ? $keywords : ''),
+
+                                    ]),
+
+                                ])->columnSpan(6),
+
+
+                            ]),
+
+
+                            Grid::make([
+
+                                Column::make([
+                                    Divider::make('Главная'),
+
+
                                     Collapse::make('', [
 
                                         Text::make('Кол-во лет', 'index_a_1')->default((isset($index_a_1)) ? $index_a_1 : ''),
@@ -134,12 +158,11 @@ class IndexPage extends Page
 
                                     ]),
 
-
                                 ])->columnSpan(12),
-
                             ]),
-                            Grid::make([
 
+
+                            Grid::make([
                                 Column::make([
 
                                     Collapse::make('', [
@@ -161,6 +184,7 @@ class IndexPage extends Page
 
                                     ]),
                                 ])->columnSpan(6),
+
                             ]),
 
 

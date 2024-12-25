@@ -30,7 +30,7 @@
                         @if( $slide['json_video'])
                             {!! $slide['json_video'] !!}
                         @else
-                            <img src="{{ Storage::url($slide['json_img']) }}" alt="{{ $slide['json_text'] }}" />
+                            <img src="{{ asset(intervention('505x280', $slide['json_img'], 'gallery', 'cover')) }}" alt="{{ $slide['json_text'] }}" />
 
 
                         @endif

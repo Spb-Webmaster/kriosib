@@ -36,6 +36,9 @@ use MoonShine\UI\Components\{Breadcrumbs,
 use MoonShine\MenuManager\MenuGroup;
 use MoonShine\MenuManager\MenuItem;
 use App\MoonShine\Resources\UserSliderResource;
+use App\MoonShine\Resources\GalleryResource;
+use App\MoonShine\Resources\PriceResource;
+use App\MoonShine\Resources\ProductResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -57,6 +60,9 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Настройки сайта', SettingPage::class, 'adjustments-vertical'),
             ])
             MenuItem::make('UserSliders', UserSliderResource::class),
+            MenuItem::make('Galleries', GalleryResource::class),
+            MenuItem::make('Prices', PriceResource::class),
+            MenuItem::make('Products', ProductResource::class),
         ];
     }
 
