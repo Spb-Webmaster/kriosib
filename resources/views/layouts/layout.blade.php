@@ -20,13 +20,14 @@
     @yield('canonical', '')
 
 </head>
-<body>
+<body class="page {{ route_name() }}">
 <div id="content" class="content_ {{ route_name() }} ">
     <x-message.message/>
     <x-message.message_error/>
-{{--    @include('templates.axeld.header', ['route' => route_name()])--}}
-    <div class="wrapp_block_81"></div>
+   @include('include.templates.header', ['route' => route_name()])
     @yield('content')
+    @include('include.templates.footer', ['route' => route_name()])
+
 </div><!--.content_-->
 
 {{--@include('templates.axeld.footer')--}}

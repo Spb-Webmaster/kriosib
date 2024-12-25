@@ -12,6 +12,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 import './ui/jquery-ui.min';
 import './chosen/chosen.jquery';
+import 'slick-carousel/slick/slick';
 
 
 import './script';

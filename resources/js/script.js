@@ -7,13 +7,12 @@ import {autocomplete} from "./include/autocomplete";
 import {menu_js} from "./include/menu";
 //import {yandex_map_object} from "./include/yandex_map";
 import {mobile_menu, add__mobile_menu, mobile_menu_close} from "./include/mobile";
-//import {slick} from "./include/slick";
-//import {translate} from "./include/translate";
-//import {faq} from "./include/faq";
-//import { canche_contacts, toggle_contacts } from './include/canche_contacts';
-//import { city } from './include/city';
+import {slick} from "./include/slick";
+import {swiper} from "./include/swiper";
+
 import { chosen } from './include/select';
 import { bid } from './include/bid';
+//import {yandex_map_object} from "./include/yandex_map";
 
 
 
@@ -33,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
     chosen() //  селекты
     bid() //  заявка в форме
     _iserror() // input удаление  рамки при error
+    slick() // слайдер
+    swiper() // слайдер swiper
+
+
+
+
 
 
 });

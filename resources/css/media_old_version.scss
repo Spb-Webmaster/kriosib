@@ -1,0 +1,814 @@
+@charset "utf-8";
+$color: #282828;
+$colorRed: #EF533F;
+$colorCCC: #CCCCCC;
+$colorGrey: #667085;
+$colorBlue: #095C9A;
+$colorGreen: #0f6567;
+$colorYellow: #FF931E;
+
+
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin family {
+    font-family: 'Source Sans Pro', "Arial Narrow", Arial, Helvetica, sans-serif;
+
+
+}
+
+
+@mixin Inter {
+    font-family: 'Inter Variable', sans-serif;
+}
+
+@mixin Roboto {
+    font-family: 'Roboto Flex Variable', sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+nav a#pull {
+    display: none;
+}
+
+@media screen and (max-width: 1290px) {
+    body.page {
+        background: url(http://kriosib.test/storage/images/back_page.jpg) top center repeat-x;
+    }
+
+    body {
+        background: url(http://kriosib.test/storage/images/back_index.jpg) top center repeat-x;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    html {
+        min-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .block_2 {
+        padding: 0 20px;
+    }
+
+    .bl_02_left img {
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .axeld_cont_1_flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bl_01_4 {
+        padding: 10px 10px;
+    }
+
+    .bl_01_3 {
+        padding: 10px 10px;
+    }
+
+    .bl_01_2 {
+        padding: 10px 10px;
+    }
+
+    .bl_01_1 {
+        padding: 10px 10px;
+    }
+
+    .full__static_page {
+        padding: 0 20px;
+    }
+
+    .cat__ {
+        margin: 0 auto;
+        padding: 35px 20px 20px 20px;
+    }
+
+    .tesers__ {
+        padding: 0 20px;
+    }
+
+    .price_teaser {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .price_teaser .cl_shaddow {
+        padding: 0 20px 20px 20px;
+    }
+
+    .tesers__sp {
+        padding: 0 20px 10px 20px;
+    }
+
+    .flex_block_1 {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1100px;
+        height: auto;
+        padding-bottom: 15px;
+        padding: 0 20px;
+    }
+
+    .mask_full {
+        display: none
+    }
+
+    .flex_block_2 {
+        margin: 0 auto;
+        max-width: 1100px;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .flex_block_3 {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1100px;
+        height: auto;
+        padding: 15px 0 50px 0;
+    }
+
+    .full_left_3 {
+        padding: 8px 20px 10px 20px !important;
+    }
+
+    .full__sp {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .block_4_regular_slider .slick-prev {
+        left: 0px;
+    }
+
+    .block_4_regular_slider .slick-next {
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .tesers__ {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .bl_02_left {
+        width: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    .bl_02_right {
+        width: 80%;
+    }
+
+    img {
+        max-width: none;
+    }
+
+    .flex_left_1 {
+        width: 636px;
+    }
+
+    .flex_right_1 {
+        width: 440px;
+        padding-left: 2%;
+    }
+
+    .mask_full {
+        display: none
+    }
+
+    .teaeser_item_ {
+        padding-bottom: 20px;
+        margin: 0 15px;
+    }
+}
+
+@media screen and (max-width: 967px) {
+    .wi920 {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .bl_02_right {
+        width: 100%;
+    }
+
+    .bl_02_left a {
+        display: block;
+        padding: 22px 0 10px 0;
+    }
+
+    .axeld_cont_2_flex {
+        display: block;
+    }
+
+    .axeld_cont_1_flex {
+        background: #0185c3;
+        padding: 15px 0 25px 0;
+    }
+
+    .bl_01_1 {
+        width: 50%
+    }
+
+    .bl_01_2 {
+        width: 50%
+    }
+
+    .bl_01_3 {
+        width: 50%
+    }
+
+    .bl_01_4 {
+        width: 50%
+    }
+
+    .top_menu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .top_menu li {
+        display: inline-block !important;
+        padding: 0 !important
+    }
+
+    .bl_02_left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block_2 {
+        height: auto;
+    }
+
+    body, body.page {
+        background: none;
+    }
+
+    .bl_03_left {
+        display: none
+    }
+
+    .bl_03_right {
+        width: 100%;
+        padding: 16px 20px 16px 20px;
+        min-height: 100px;
+    }
+
+    .slid_item_right img {
+        max-width: none;
+    }
+
+    .slid_item_left {
+        width: 50%;
+    }
+
+    .slid_item_right {
+        width: 50%;
+    }
+
+    .wi920.block_4_back {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px 0 20px;
+        background: url(http://kriosib.test/storage/images/block_4_back.png);
+    }
+
+    .mask_full {
+        display: none
+    }
+
+    .full_left_3 {
+        text-align: center
+    }
+
+    .flex_right_3 {
+        width: 100%;
+        padding: 20px 20px 0 20px !important;
+    }
+
+    .flex_block_3 {
+        display: block;
+    }
+
+    .flex_left_3 {
+        width: 100%;
+    }
+
+    .flex_right_3 {
+        width: 100%;
+    }
+
+    .full_block_3_table {
+        width: 100%;
+    }
+
+    .flex_right_3 {
+        width: 100%;
+        padding: 20px 0 0 10px;
+    }
+
+    .td_ {
+        @include Roboto;
+        font-weight: 900;
+        padding: 0 10px 0 0;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .wi920 {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 906px) {
+    .wi920 {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .flex_block_1 {
+        display: block;
+    }
+
+    .flex_left_1 {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .flex_right_1 {
+        width: 100%;
+        padding-left: 2%;
+        padding-top: 20px;
+    }
+
+    .mask_full {
+        display: none
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .bl_06_desc {
+        max-width: none;
+        margin: 0 auto;
+        padding: 45px 20px 0 20px;
+    }
+
+    .bl_06_right .desc_static {
+        padding: 40px 0px 0 25px;
+    }
+
+    .land_left {
+        width: 100%;
+        padding: 25px 0 25px 68px;
+    }
+
+    .land_right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0px 20px 0;
+    }
+
+    .land_flex {
+        display: block;
+    }
+
+    .slid_item_flex {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .block_4 .slider__ {
+        height: auto;
+    }
+
+    .slid_item_left {
+        width: 100%;
+    }
+
+    .slid_item_right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slid_item_right img {
+        margin: 0 auto;
+    }
+
+    .slid_item_left_cont {
+        width: 505px;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .block_2 {
+        padding: 0 0;
+    }
+
+    .axeld_cont_1_flex {
+        display: none
+    }
+
+    .top_menu nav a#pull:after {
+        content: "";
+        background: url(http://kriosib.test/storage/images/nav-icon.png) no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 27px;
+        top: 11px;
+    }
+
+    .top_menu nav a#pull {
+        color: #fff;
+        height: 46px;
+        padding-left: 15px;
+        line-height: 46px;
+        background: #0185c3;
+        display: block;
+        text-align: left;
+        width: 100%;
+        position: relative;
+    }
+
+    .top_menu nav ul {
+        display: none;
+        height: auto;
+    }
+
+    .top_menu ul li {
+        display: block !important;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 50px;
+    }
+
+    .top_menu ul li a {
+        justify-content: center;
+        height: 50px;
+        background-image: none;
+
+        border-bottom: 1px solid transparent; /* задаем сплошную прозрачную границу шириной в 20 пикселей */
+        /* наша собственная граница */
+        -moz-border-image: -moz-linear-gradient(left, #3acfd5 0%, #0185c3 100%);
+        -webkit-border-image: -webkit-linear-gradient(left, #3acfd5 0%, #0185c3 100%);
+        border-image: linear-gradient(to right, #3acfd5 0%, #0185c3 100%);
+
+        border-image-slice: 1; /* смещение фона границы */
+
+    }
+
+    .top_menu ul li.active a {
+        background-color: #0185c3;
+        color: #fff;
+
+    }
+
+    .top_menu ul li:last-child a {
+
+        border-bottom: none;
+        background-image: none !important;
+    }
+
+    .top_menu ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .axeld_cont_6_flex {
+        max-width: 1100px;
+        display: block;
+        justify-content: space-between;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .bl_06_right {
+        width: 100%;
+        padding-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .bl_06_left {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .bl_06_left_top img {
+        display: none
+    }
+
+    .bl_06_left_top {
+        background-color: #0185c3
+    }
+
+    .index_left2 {
+        display: none
+    }
+
+    .bl_06_left_top {
+        background-color: #0185c3;
+        padding: 0 20px;
+    }
+
+    .bott__table {
+        display: block;
+    }
+
+    .bl_01_1 {
+        width: 100%
+    }
+
+    .bl_01_2 {
+        width: 100%
+    }
+
+    .bl_01_3 {
+        width: 100%
+    }
+
+    .bl_01_4 {
+        width: 100%
+    }
+
+    .bott__table_desc {
+        padding: 20px 20px 0 20px;
+    }
+
+    .bl_06_left {
+        width: 100%;
+        padding-bottom: 30px;
+        padding: 40px 0px 0 0px;
+    }
+
+    .bl_06_right {
+        width: 100%;
+        padding-bottom: 30px;
+        padding: 0 20px 30px 20px;
+    }
+
+    .bl_06_desc {
+        max-width: none;
+        margin: 0 auto;
+        padding: 45px 0 0 0;
+    }
+
+    .bl_06_right .desc_static {
+        padding: 40px 0px 0 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .top_menu ul {
+        flex-wrap: wrap;
+    }
+
+    .justify-content.w_1000 {
+        display: block;
+    }
+
+    .desc_static {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer {
+        min-height: 90px;
+        background-color: #0285c2;
+        background-image: none !important;
+    }
+
+    .highlight {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .highlight tbody {
+        width: 400px;
+    }
+
+    .contener__222 {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .land_left {
+        width: 100%;
+        padding: 25px 0 25px 0px;
+    }
+
+    .slid_item_left_cont {
+        width: 100%;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+
+    .slid_item_right img {
+        margin: 0 auto;
+        width: 100%
+    }
+
+    .land_right img {
+        max-width: 100%;
+    }
+
+    .bot__ {
+        padding: 0
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .slid_item_right {
+        height: auto;
+    }
+
+    .flex_footer {
+        display: block;
+    }
+
+    .f1 {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .f2 {
+        justify-content: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slid_item_277 {
+        max-width: 290px;
+        padding: 0 20px
+    }
+
+    .slid_item_left_cont {
+        width: auto;
+        background: #0285c2;
+        color: #fff;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .slid_item_left {
+        height: auto;
+    }
+
+    .bot__ a span {
+        margin-left: 0;
+    }
+
+    .bot__ a:hover {
+        background: none;
+    }
+
+    .bot__ a {
+        display: flex;
+        width: 100%;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        font-size: 22px;
+        color: #0285c2;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .top_menu ul li {
+        width: 100%;
+    }
+
+    .top_menu li a {
+        width: 100%;
+    }
+
+    .desc__label span {
+        position: relative;
+        top: 12px;
+        padding: 0 20px;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    .desc__1 {
+        padding: 30px 20px;
+    }
+
+    .btn-top {
+        display: none !important;
+    }
+
+    .price_table {
+        width: 600px;
+    }
+
+    .full_block_3 {
+        min-height: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 15px;
+    }
+
+    .th_ .td__3 {
+        font-size: 12px;
+    }
+
+    .th_ .td__4 {
+        font-size: 12px;
+    }
+}
+
+.site {
+    padding: 1% 1% 2% 1%;
+    position: relative;
+    top: 0px;
+    margin-top: 1px;
+    background: #e9292a;
+    text-align: center
+}
+
+.site input[type="submit"] {
+    width: auto;
+    padding: 5px 20px;
+    border: none !important;
+    height: 41px;
+    border-radius: 20px;
+    background: url(http://kriosib.test/storage/images/buttom_full.jpg);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    line-height: 41px;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+.site input[type="submit"]:hover {
+    text-decoration: underline
+}
+

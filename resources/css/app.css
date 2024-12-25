@@ -11,7 +11,7 @@
 @import "./pagination.scss";
 
 @import "./slick-carousel/slick.scss";
-@import "./slick-carousel/theme-slick.scss";
+/*@import "./slick-carousel/theme-slick.scss";*/
 @import "./ui/jquery-ui.min.css";
 
 @import "./connect/connect.scss";
@@ -47,4 +47,6 @@
 @import "tabs.scss";
 
 @import "./style.scss";
+@import "./style_old_version.scss";
 @import "./media.scss";
+@import "./media_old_version.scss";
