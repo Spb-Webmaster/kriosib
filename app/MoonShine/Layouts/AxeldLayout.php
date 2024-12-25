@@ -13,6 +13,8 @@ use App\MoonShine\Pages\SettingPage;
 use App\MoonShine\Resources\GalleryResource;
 use App\MoonShine\Resources\MoonShineUserResource;
 use App\MoonShine\Resources\MoonShineUserRoleResource;
+use App\MoonShine\Resources\PriceResource;
+use App\MoonShine\Resources\ProductResource;
 use App\MoonShine\Resources\UserSliderResource;
 use MoonShine\Laravel\Layouts\AppLayout;
 use MoonShine\ColorManager\ColorManager;
@@ -76,10 +78,10 @@ final class AxeldLayout extends AppLayout
                     MenuItem::make('Фото', GalleryResource::class, 'photo'),
                 ]),
                 MenuGroup::make('Продукция', [
-                    MenuItem::make('Товары', GalleryResource::class, 'shopping-cart'),
+                    MenuItem::make('Товары', ProductResource::class, 'shopping-cart'),
                 ]),
                 MenuGroup::make('Прайс', [
-                    MenuItem::make('Цены', GalleryResource::class, 'banknotes'),
+                    MenuItem::make('Цены', PriceResource::class, 'banknotes'),
                 ]),
             ]),
             MenuGroup::make('Модули', [

@@ -5,14 +5,13 @@ import { close_flash } from './include/flash';
 
 import {autocomplete} from "./include/autocomplete";
 import {menu_js} from "./include/menu";
-//import {yandex_map_object} from "./include/yandex_map";
 import {mobile_menu, add__mobile_menu, mobile_menu_close} from "./include/mobile";
 import {slick} from "./include/slick";
 import {swiper} from "./include/swiper";
 
 import { chosen } from './include/select';
 import { bid } from './include/bid';
-//import {yandex_map_object} from "./include/yandex_map";
+import { print_price } from "./include/print";
 
 
 
@@ -28,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
     mobile_menu() // работа мобильного меню
     add__mobile_menu() // добавить нужные пункты в меню
     mobile_menu_close() // закрытие мобильного меню
-  //  slick() // слайдер
     chosen() //  селекты
     bid() //  заявка в форме
     _iserror() // input удаление  рамки при error
     slick() // слайдер
     swiper() // слайдер swiper
+    print_price() // распечатать price
 
 
 

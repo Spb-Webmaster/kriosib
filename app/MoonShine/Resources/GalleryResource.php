@@ -34,7 +34,7 @@ use MoonShine\UI\Fields\Textarea;
 class GalleryResource extends ModelResource
 {
     protected string $model = Gallery::class;
-    protected string $title = 'Слайдеры';
+    protected string $title = 'Галерея';
 
     protected string $column = 'title';
 

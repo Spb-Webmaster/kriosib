@@ -13,6 +13,18 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->string('subtitle')->nullable();
+            $table->string('img')->nullable();
+            $table->string('price')->nullable();
+            $table->text('desc')->nullable();
+            $table->text('desc2')->nullable();
+            $table->longText('plan')->nullable();
+            $table->longText('property')->nullable();
+            $table->text('params')->nullable();
+            $table->integer('published')->default(1);
+            $table->integer('sorting')->default(999);
             $table->timestamps();
         });
     }

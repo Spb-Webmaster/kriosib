@@ -6,6 +6,8 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Pages\PageController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\PriceController;
+use App\Http\Controllers\TestController;
 use App\MoonShine\Controllers\MoonshineCatalogController;
 use App\MoonShine\Controllers\MoonshineGalleryController;
 use App\MoonShine\Controllers\MoonshineIndexController;
@@ -52,6 +54,18 @@ Route::controller(AjaxController::class)->group(function () {
  * /// AjaxController
  */
 
+/**
+ * Цены
+ */
+Route::controller(PriceController::class)->group(function () {
+
+    Route::get('/price', 'page')->name('price');
+
+});
+/**
+ * /// Цены
+ */
+
 
 Route::controller(GalleryController::class)->group(function () {
 
@@ -71,10 +85,16 @@ Route::controller(PartnerController::class)->group(function () {
 
 });
 
+Route::controller(TestController::class)->group(function () {
 
-Route::controller(PageController::class)->group(function () {
+    Route::get('/test', 'import');
+
+});
+
+
+/*Route::controller(PageController::class)->group(function () {
 
     Route::get('{page:slug}', 'page')->name('page');
 
 });
-
+*/

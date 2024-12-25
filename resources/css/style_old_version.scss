@@ -90,15 +90,16 @@ html, body {
 }
 
 
-
 body.page {
     min-width: 100% !important;
     background: url(http://kriosib.test/storage/images/back_page.jpg) top center repeat-x
 }
+
 body.page.home {
     min-width: 100% !important;
     background: url(http://kriosib.test/storage/images/back_index.jpg) top center repeat-x
 }
+
 .nav > li > a:hover, .nav > li > a:focus {
     text-decoration: none;
     background: none
@@ -506,20 +507,25 @@ img {
     min-height: 254px;
     position: relative;
 }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -30px !important;
 }
+
 .swiper-slide {
     text-align: left;
 }
+
 .swiper-button-next {
     right: -2px !important;
 }
+
 .swiper-button-prev {
     left: -2px !important;
 }
+
 .wi920 .h3 {
-    padding: 20px 0 30px  0;
+    padding: 20px 0 30px 0;
     margin: 0;
     text-transform: uppercase;
     color: #101b23;
@@ -1469,7 +1475,7 @@ full
     padding: 0 0 49px 0;
     font-size: 29px;
     color: #0285c2;
-      @include Roboto;
+    @include Roboto;
     font-weight: 900;
 }
 
@@ -1609,7 +1615,7 @@ full
 }
 
 .mmaapp strong {
-      @include Roboto;
+    @include Roboto;
     font-weight: 900;
 }
 
@@ -1842,3 +1848,29 @@ full
 
 /** 2020*/
 
+.print_price {
+    box-shadow: 6px 7px 20px 5px #999;
+    height: 62px;
+    border-bottom: 5px solid white;
+    border-top: 5px solid white;
+    background: #0285c2;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 967px) {
+    .print_price {
+        display: none
+    }
+}
